@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.2'
+
+    id 'io.spring.dependency-management' version '1.1.0'
+
+}
+
+group 'me.kimyerin' //설정한 도메인
+version '1.0'
+sourceCompatibility = '17'
+
+repositories { //의존성을 받을 저장소
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
