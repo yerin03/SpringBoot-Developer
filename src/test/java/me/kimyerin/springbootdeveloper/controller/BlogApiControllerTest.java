@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import me.kimyerin.springbootdeveloper.domain.Article;
 import me.kimyerin.springbootdeveloper.dto.AddArticleRequest;
 //import me.kimyerin.springbootdeveloper.dto.UpdateArticleRequest;
+import me.kimyerin.springbootdeveloper.dto.UpdateArticleRequest;
 import me.kimyerin.springbootdeveloper.repository.BlogRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -150,7 +151,7 @@ class BlogApiControllerTest {
     }
 
 
-    /*
+
     @DisplayName("updateArticle: 아티클 수정에 성공한다.")
     @Test
     public void updateArticle() throws Exception {
@@ -181,6 +182,6 @@ class BlogApiControllerTest {
 
         assertThat(article.getTitle()).isEqualTo(newTitle);
         assertThat(article.getContent()).isEqualTo(newContent);
-    }*/
+    }
 
 }

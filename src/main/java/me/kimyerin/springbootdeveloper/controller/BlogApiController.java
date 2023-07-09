@@ -20,6 +20,7 @@ import me.kimyerin.springbootdeveloper.dto.AddArticleRequest;
 //import me.kimyerin.springbootdeveloper.dto.ArticleResponse;
 //import me.kimyerin.springbootdeveloper.dto.UpdateArticleRequest;
 import me.kimyerin.springbootdeveloper.dto.ArticleResponse;
+import me.kimyerin.springbootdeveloper.dto.UpdateArticleRequest;
 import me.kimyerin.springbootdeveloper.service.BlogService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -70,7 +71,7 @@ public class BlogApiController {
                 .build();
     }
 
-    /*
+
 
     @PutMapping("/api/articles/{id}")
     public ResponseEntity<Article> updateArticle(@PathVariable long id,
@@ -79,6 +80,6 @@ public class BlogApiController {
 
         return ResponseEntity.ok()
                 .body(updatedArticle);
-    }*/
+    }
 
 }

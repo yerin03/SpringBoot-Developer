@@ -1,9 +1,11 @@
 package me.kimyerin.springbootdeveloper.service;
 
-
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import me.kimyerin.springbootdeveloper.domain.Article;
 import me.kimyerin.springbootdeveloper.dto.AddArticleRequest;
+import me.kimyerin.springbootdeveloper.dto.ArticleResponse;
+import me.kimyerin.springbootdeveloper.dto.UpdateArticleRequest;
 import me.kimyerin.springbootdeveloper.repository.BlogRepository;
 import org.springframework.stereotype.Service;
 
@@ -37,7 +39,7 @@ public class BlogService {
         blogRepository.deleteById(id);
     }
 
-    /*
+
     @Transactional
     public Article update(long id, UpdateArticleRequest request) {
         Article article = blogRepository.findById(id)
@@ -47,7 +49,7 @@ public class BlogService {
 
         return article;
     }
-    */
+
 
 
 }
