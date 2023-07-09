@@ -100,7 +100,7 @@ class BlogApiControllerTest {
                 .andExpect(jsonPath("$[0].title").value(title));
     }
 
-    /*
+
     @DisplayName("findArticle: 아티클 단건 조회에 성공한다.")
     @Test
     public void findArticle() throws Exception {
@@ -123,6 +123,7 @@ class BlogApiControllerTest {
                 .andExpect(jsonPath("$.content").value(content))
                 .andExpect(jsonPath("$.title").value(title));
     }
+
 
 
     @DisplayName("deleteArticle: 아티클 삭제에 성공한다.")
@@ -149,6 +150,7 @@ class BlogApiControllerTest {
     }
 
 
+    /*
     @DisplayName("updateArticle: 아티클 수정에 성공한다.")
     @Test
     public void updateArticle() throws Exception {
