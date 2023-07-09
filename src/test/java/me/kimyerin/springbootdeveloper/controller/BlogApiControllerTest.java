@@ -76,7 +76,7 @@ class BlogApiControllerTest {
         assertThat(articles.get(0).getContent()).isEqualTo(content);
     }
 
-    /*@DisplayName("findAllArticles: 아티클 목록 조회에 성공한다.")
+    @DisplayName("findAllArticles: 아티클 목록 조회에 성공한다.")
     @Test
     public void findAllArticles() throws Exception {
         // given
@@ -100,6 +100,7 @@ class BlogApiControllerTest {
                 .andExpect(jsonPath("$[0].title").value(title));
     }
 
+    /*
     @DisplayName("findArticle: 아티클 단건 조회에 성공한다.")
     @Test
     public void findArticle() throws Exception {
