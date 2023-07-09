@@ -4,7 +4,9 @@ package me.kimyerin.springbootdeveloper;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+@EnableJpaAuditing
 @SpringBootApplication //spring boot에 필요한 기본 설정을 해준다.
 
 public class SpringBootDeveloperApplication {
