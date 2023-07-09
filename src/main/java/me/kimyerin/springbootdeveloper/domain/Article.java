@@ -5,30 +5,45 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.time.LocalDateTime;
 
-
-@Entity
-@Getter
+@EntityListeners(AuditingEntityListener.class)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Getter
+@Entity
 public class Article {
 
-    @Id //기본키 설정
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", updatable = false) //Column:db의 칼럼과 필드 매핑
+    @Column(name = "id", updatable = false)
     private Long id;
 
-    @Column(name = "title", updatable = false)
+    @Column(name = "title", nullable = false)
     private String title;
 
-    @Column (name = "content" , updatable = false)
+    @Column(name = "content", nullable = false)
     private String content;
 
+    /*@CreatedDate
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+
+    @LastModifiedDate
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;*/
+
     @Builder
-    public Article(String title,String content){
+    public Article(String title, String content) {
         this.title = title;
         this.content = content;
     }
 
-
+    /*public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }*/
 }
