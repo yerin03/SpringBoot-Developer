@@ -19,6 +19,7 @@ import me.kimyerin.springbootdeveloper.domain.Article;
 import me.kimyerin.springbootdeveloper.dto.AddArticleRequest;
 //import me.kimyerin.springbootdeveloper.dto.ArticleResponse;
 //import me.kimyerin.springbootdeveloper.dto.UpdateArticleRequest;
+import me.kimyerin.springbootdeveloper.dto.ArticleResponse;
 import me.kimyerin.springbootdeveloper.service.BlogService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -40,7 +41,7 @@ public class BlogApiController {
                 .body(savedArticle);
     }
 
-   /* @GetMapping("/api/articles")
+    @GetMapping("/api/articles")
     public ResponseEntity<List<ArticleResponse>> findAllArticles() {
         List<ArticleResponse> articles = blogService.findAll()
                 .stream()
@@ -50,6 +51,8 @@ public class BlogApiController {
         return ResponseEntity.ok()
                 .body(articles);
     }
+
+    /*
     @GetMapping("/api/articles/{id}")
     public ResponseEntity<ArticleResponse> findArticle(@PathVariable long id) {
         Article article = blogService.findById(id);

@@ -7,6 +7,8 @@ import me.kimyerin.springbootdeveloper.dto.AddArticleRequest;
 import me.kimyerin.springbootdeveloper.repository.BlogRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @RequiredArgsConstructor //생성자 추가
 @Service //빈으로 등록
 public class BlogService {
@@ -20,5 +22,9 @@ public class BlogService {
         return blogRepository.save(request.toEntity());
     }
 
+    //블로그 글 조회
+    public List<Article> findAll() {
+        return blogRepository.findAll();
+    }
 
 }
